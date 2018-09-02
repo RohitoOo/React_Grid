@@ -29,9 +29,7 @@ class App extends Component {
     this.state = {
       columns: [
         { name: 'name', title: 'Name' },
-        { name: 'sex', title: 'Sex' },
         { name: 'city', title: 'City' },
-        { name: 'car', title: 'Car' },
       ],
       tableColumnExtensions: [
         { columnName: 'name', width: 300 },
@@ -58,7 +56,7 @@ class App extends Component {
             })
             : null),
         },
-        length: 3,
+        length: 2,
       }),
     };
   }
@@ -84,6 +82,7 @@ class App extends Component {
             columnExtensions={tableColumnExtensions}
           />
           <TableHeaderRow />
+          {/* TableTreeColumn - renders the table column with an indent, toggle button, and selection controls */}
           <TableTreeColumn
             for="name"
           />
